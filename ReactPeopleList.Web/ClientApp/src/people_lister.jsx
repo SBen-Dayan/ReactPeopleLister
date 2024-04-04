@@ -44,12 +44,9 @@ class PeopleLister extends React.Component {
         return (
             <div className="container mt-5">
                 <PersonForm 
-                onTextboxChange={this.onTextboxChange}
-                onButtonClick={this.onButtonClick}
-                currentPerson={{
-                    firstName: this.state.firstName,
-                    lastName: this.state.lastName,
-                    age: this.state.age}}/>
+                    onTextboxChange={this.onTextboxChange}
+                    onButtonClick={this.onButtonClick}
+                    currentPerson={this.currentPerson()} />
                 <PeopleTable people={this.state.people}/>    
             </div>
         )
