@@ -19,7 +19,7 @@ class PeopleTable extends React.Component {
                     {this.props.people.map(p => {
                         return (
                             <>
-                            <tr>
+                            <tr className={parseInt(p.age) >= 65 ? "table-danger" : ""}>
                                 <td>{p.firstName}</td>
                                 <td>{p.lastName}</td>
                                 <td>{p.age}</td>
